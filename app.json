@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "clem-app",
+    "slug": "clem-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "clem needs camera access so you can scan your meals.",
+        "NSPhotoLibraryUsageDescription": "clem needs photo library access so you can pick an existing photo of your meal."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#E6F4FE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "clem needs photo library access so you can pick an existing photo of your meal.",
+          "cameraPermission": "clem needs camera access so you can scan your meals."
+        }
+      ]
+    ]
+  }
+}
